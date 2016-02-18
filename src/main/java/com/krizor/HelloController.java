@@ -10,7 +10,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping(value = "/beer-app")
-public class HelloController implements ErrorController{
+public class HelloController implements ErrorController {
 
     @RequestMapping("/bira/{antal}")
     public Map<String, Integer> index(@PathVariable Integer antal) {
@@ -25,15 +25,11 @@ public class HelloController implements ErrorController{
     }
 
     @RequestMapping("/crab")
-    public String crab() {
-        return ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:" +
-                ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:" +
-                ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:" +
-                ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:" +
-                ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:";
+    public Map<String, String> crab() {
+        return Collections.singletonMap("text", ":glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab: \\n :glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab: \\n :glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab: \\n :glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab:");
     }
 
-    @RequestMapping(value="/laggtillbira/{brand}", method= RequestMethod.POST)
+    @RequestMapping(value = "/laggtillbira/{brand}", method = RequestMethod.POST)
     public Map<String, List<String>> index(@PathVariable String brand) {
         biror.add(brand);
 
