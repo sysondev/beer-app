@@ -26,7 +26,7 @@ public class HelloController implements ErrorController {
 
     @RequestMapping("/crab")
     public Map<String, String> crab() {
-        return Collections.singletonMap("text", ":glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab: \"\\n\" :glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab: \"\\n\" :glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab: \"\\n\" :glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab:");
+        return Collections.singletonMap("text", ":glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab:");
     }
 
     @RequestMapping(value = "/laggtillbira/{brand}", method = RequestMethod.POST)
