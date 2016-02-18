@@ -24,6 +24,15 @@ public class HelloController implements ErrorController{
         return Collections.singletonMap("biror", biror);
     }
 
+    @RequestMapping("/crab")
+    public String crab() {
+        return ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:" +
+                ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:" +
+                ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:" +
+                ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:" +
+                ":glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab::glitch_crab:";
+    }
+
     @RequestMapping(value="/laggtillbira/{brand}", method= RequestMethod.POST)
     public Map<String, List<String>> index(@PathVariable String brand) {
         biror.add(brand);
