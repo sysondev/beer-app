@@ -1,10 +1,7 @@
 package com.krizor;
 
 import org.springframework.boot.autoconfigure.web.ErrorController;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
@@ -24,9 +21,9 @@ public class HelloController implements ErrorController {
         return Collections.singletonMap("biror", biror);
     }
 
-    @RequestMapping("/crab")
-    public Map<String, String> crab() {
-        return Collections.singletonMap("text", ":glitch_crab: :glitch_crab: :glitch_crab: :glitch_crab:");
+    @RequestMapping(value = "/crab", method = RequestMethod.POST)
+    public String crab(@RequestParam String text) {
+        return text;
     }
 
     @RequestMapping(value = "/laggtillbira/{brand}", method = RequestMethod.POST)
